@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación - 15 Años</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #fdeff9, #ec38bc);
+      color: #333;
+      text-align: center;
+    }
+    .entrada {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      padding: 1em 2em;
+      font-size: 1.1em;
+      background-color: #ec38bc;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+    }
+    .contenido {
+      display: none;
+      padding: 2em;
+    }
+    h1, h2, h3 {
+      margin: 0.5em 0;
+    }
+    .detalle {
+      background: white;
+      margin: 1em auto;
+      padding: 1em;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+    }
+    .formulario input, .formulario select {
+      padding: 0.5em;
+      width: 100%;
+      margin: 0.5em 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .formulario button {
+      margin-top: 1em;
+      background-color: #333;
+    }
+    footer {
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="entrada">
+    <h1>Mis 15 Años</h1>
+    <h2>¡Estás invitado!</h2>
+    <p>Haz clic para ver la invitación</p>
+    <button onclick="mostrarInvitacion()">Ver Invitación</button>
+  </div>
+
+  <div class="contenido" id="contenido">
+    <h2>Valeria celebra sus 15</h2>
+    <div class="detalle">
+      <h3>📅 Fecha:</h3>
+      <p>Sábado, 12 de octubre de 2025</p>
+
+      <h3>📍 Lugar:</h3>
+      <p>Salón Diamante, Bogotá<br>
+         <a href="https://maps.google.com" target="_blank">Ver en el mapa</a></p>
+
+      <h3>👗 Dress code:</h3>
+      <p>Elegante</p>
+    </div>
+
+    <h3>Confirmación de asistencia</h3>
+    <form class="formulario" action="https://formsubmit.co/tu-correo@ejemplo.com" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <select name="asistencia" required>
+        <option value="">¿Asistirás?</option>
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+      <button type="submit">Confirmar</button>
+    </form>
+
+    <footer>
+      Gracias por acompañarme en este día tan especial.
+    </footer>
+  </div>
+
+  <script>
+    function mostrarInvitacion() {
+      document.querySelector('.entrada').style.display = 'none';
+      document.getElementById('contenido').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
